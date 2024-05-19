@@ -1,0 +1,41 @@
+# Teckenspråkstolkning med Computer Vision
+
+## Projektbeskrivning
+Detta projekt syftar till att utveckla en realtidsapplikation för tolkning av teckenspråk genom att kombinera teknologier som MediaPipe, OpenCV, Sklearn och Streamlit. Applikationen kan känna igen och tolka handrörelser för teckenspråkets bokstäver, vilket underlättar kommunikationen mellan döva, hörselskadade och hörande personer.
+
+## Funktioner
+Handspårning - med MediaPipe Hands för att identifiera och spåra 21 referenspunkter på handen.
+Bildförbehandling och datasetgenerering - med OpenCV för att skapa och förbättra kvaliteten på bilderna i datasetet.
+Maskininlärning - med Sklearn för att träna en SVM-modell att känna igen teckenspråkets bokstäver.
+Användargränssnitt - byggt med Streamlit för realtidstolkning via webbkameran eller bilduppladdning.
+
+## För att testa applikationen
+
+### Klona repot
+```bash
+git clone https://github.com/yourusername/teckensprakstolkning.git
+```
+
+### Kör Streamlit-applikationen
+För att starta applikationen, kör:
+```bash
+streamlit run main.py
+```
+
+## Projektets Struktur
+- `create_dataset.py` - Skapar ett dataset med bilder för teckenspråksbokstäver med hjälp av OpenCV.
+- `create_csv.py` - Extraherar referenspunkter från bilder med hjälp av MediaPipe Hands och sparar dem i en CSV-fil.
+- `train_SVC.ipynb` - Tränar maskininlärningsmodellen.
+- `main.py` - Streamlit-applikationen för tolkning av teckenspråk.
+- `img_process_predict.py` - Funktioner för bildbearbetning och prediktion.
+
+## Skapat av
+Patricia Pedersen
+
+
+## Referenser
+- [MediaPipe Hands Documentation](https://google.github.io/mediapipe/solutions/hands.html)
+- [OpenCV Documentation](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [Sklearn Documentation](https://scikit-learn.org/stable/documentation.html)
+
